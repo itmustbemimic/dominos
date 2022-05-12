@@ -1,9 +1,11 @@
+require("dotenv").config();
 const { v4 } = require('uuid');
 const AWS = require('aws-sdk');
+
 awsConfig = {
     region: 'ap-northeast-2',
-    accessKeyId: 'AKIARZGJ7USMZSYOK2X4',
-    secretAccessKey: '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',
+    accessKeyId: process.env.ACCESS_KEYID,
+    secretAccessKey: process.env.SECRET_ACCESSKEY,
 };
 AWS.config.update(awsConfig);
 
