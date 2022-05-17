@@ -3,7 +3,7 @@ const { v4 } = require('uuid');
 const AWS = require('aws-sdk');
 
 awsConfig = {
-    region: 'ap-northeast-2',
+    region: process.env.REGION,
     accessKeyId: process.env.ACCESS_KEYID,
     secretAccessKey: process.env.SECRET_ACCESSKEY,
 };
